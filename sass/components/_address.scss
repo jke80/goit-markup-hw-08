@@ -1,0 +1,22 @@
+.address {
+  margin-top: 20px;
+  width: 231px;
+}
+.address__item {
+  margin-bottom: 9px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.address__link {
+  color: var(--hero-title-color);
+  font-style: normal;
+  @include font(400, 14px, 24px);
+  text-decoration-line: none;
+
+  &_color_opacity {
+    color: var(--address-link-color);
+  }
+}

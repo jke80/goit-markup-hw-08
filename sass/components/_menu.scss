@@ -1,0 +1,116 @@
+@media screen and (max-width: 767px) {
+  .menu-btn {
+    display: block;
+    border: none;
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .menu-burger-btn {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .menu-burger-btn__svg {
+    fill: var(--title-font-color);
+  }
+
+  .menu-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: var(--background-color);
+
+    transform: translateX(-101%);
+    transition: transform var(--page-transition);
+
+    &.is-open {
+      transform: translateX(0);
+    }
+  }
+
+  .menu-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+
+  .menu-close-svg__btn {
+    fill: var(--title-font-color);
+
+    .menu-close-btn:hover &,
+    .menu-close-btn:focus & {
+      fill: var(--site-accent-color);
+    }
+  }
+
+  .menu-nav__link {
+    @include font(40px, 500, 47px);
+    text-decoration-line: none;
+    letter-spacing: 0.02em;
+    color: var(--title-font-color);
+    display: block;
+    padding-bottom: 32px;
+
+    &_current {
+      color: var(--site-accent-color);
+    }
+  }
+  .menu-container__tel {
+    display: block;
+    @include font(34px, 500, 40px);
+    letter-spacing: 0.02em;
+    color: var(--site-accent-color);
+  }
+  .menu-container__email {
+    display: block;
+    margin-top: 32px;
+    @include font(24px, 500, 28px);
+    letter-spacing: 0.02em;
+    color: var(--font-color);
+  }
+
+  .menu-socials {
+    position: relative;
+    margin-top: 64px;
+    display: flex;
+    gap: 20px;
+  }
+  .menu-socials__item {
+    position: relative;
+
+    &:not(:last-child)::after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 1px;
+      height: 100%;
+      background-color: var(--font-color);
+      right: -10px;
+      top: 0;
+    }
+  }
+
+  .menu-socials__link {
+    @include font(18px, 500, 22px);
+    letter-spacing: 0.02em;
+    color: var(--site-accent-color);
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-btn,
+  .menu-container {
+    display: none;
+  }
+}

@@ -1,0 +1,21 @@
+.close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--close-btn-border-color);
+  border-radius: 50%;
+  background-color: var(--background-color);
+  cursor: pointer;
+}
+
+.close-btn__icon {
+  fill: currentColor;
+  transition: fill var(--page-transition);
+
+  .close-btn:hover &,
+  .close-btn:focus & {
+    fill: var(--site-accent-color);
+  }
+}

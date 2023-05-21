@@ -1,0 +1,36 @@
+.features {
+  padding-top: 94px;
+}
+
+.features__list {
+  display: flex;
+  gap: 30px;
+}
+
+.features__item {
+  flex-basis: calc((100% - 3 * 30px) / 4);
+}
+
+.features__title {
+  @include font(700, 14px, 16px);
+  text-transform: uppercase;
+  color: var(--title-font-color);
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.features__text {
+  @include font(400, 14px, 24px);
+  margin: 0;
+}
+
+.features__thumb {
+  width: 270px;
+  height: 120px;
+  background: var(--team-background-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

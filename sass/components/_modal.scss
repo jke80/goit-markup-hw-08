@@ -1,0 +1,33 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--modal-backdrop-color);
+  transform: scale(1);
+  transition: opacity var(--page-transition), visibility var(--page-transition);
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 528px;
+  background-color: var(--background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform var(--page-transition);
+
+  .is-hidden & {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+.modal__close-btn {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}

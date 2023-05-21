@@ -1,0 +1,25 @@
+.footer {
+  background-color: var(--hero-background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer__container {
+  display: flex;
+  align-items: baseline;
+}
+.footer__socials {
+  margin-left: 70px;
+}
+
+.footer__socials-text {
+  @include font(700, 14px, 16px);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--hero-title-color);
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.footer__subscribe-form {
+  margin-left: 93px;
+}

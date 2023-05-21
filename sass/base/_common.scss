@@ -1,0 +1,28 @@
+body {
+  font-family: var(--primary-font, sans-serif);
+  color: var(--font-color);
+  letter-spacing: 0.03em;
+  background-color: var(--background-color);
+}
+
+.list {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.no-gap {
+  display: block;
+}
+
+.link {
+  @include font(14px, 500, 16px);
+  letter-spacing: 0.02em;
+  text-decoration-line: none;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}

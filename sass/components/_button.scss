@@ -1,0 +1,18 @@
+.button {
+  font-family: inherit;
+  @include font(700, 16px, 30px);
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: var(--hero-title-color);
+  background-color: var(--site-accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  transition: background-color var(--page-transition);
+
+  &:hover,
+  &:focus {
+    background-color: var(--bg-active-button);
+  }
+}

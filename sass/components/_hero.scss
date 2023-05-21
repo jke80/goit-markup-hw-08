@@ -1,0 +1,32 @@
+.hero {
+  background-color: var(--hero-background-color);
+  padding-top: 200px;
+  padding-bottom: 200px;
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      var(--hero-bg-gradient-color),
+      var(--hero-bg-gradient-color)
+    ),
+    url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hero__container {
+  text-align: center;
+}
+.hero__title {
+  @include font(900, 44px, 60px);
+  width: 696px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--hero-title-color);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.hero__btn {
+  padding: 10px 24px;
+}

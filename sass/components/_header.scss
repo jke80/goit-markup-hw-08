@@ -1,0 +1,119 @@
+.page-header {
+  border-bottom: 1px solid var(--header-border-color);
+}
+
+.page-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .site-nav {
+    display: none;
+  }
+  .auth-nav {
+    display: none;
+  }
+
+  .page-header__container {
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-nav {
+    display: flex;
+    gap: 95px;
+    align-items: center;
+  }
+
+  .page-nav__logo {
+    display: inline-block;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+
+  .site-nav {
+    display: flex;
+    gap: 50px;
+  }
+
+  .site-nav__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    position: relative;
+    display: inline-block;
+    color: var(--title-font-color);
+    transition: color var(--page-transition);
+
+    &:hover,
+    &:focus,
+    &_current {
+      color: var(--site-accent-color);
+    }
+
+    &_current::after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 4px;
+      background: var(--site-accent-color);
+      border-radius: 2px;
+      bottom: -1px;
+    }
+  }
+
+  .auth-nav__link {
+    color: var(--font-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color var(--page-transition);
+
+    &:hover,
+    &:focus {
+      color: var(--site-accent-color);
+    }
+  }
+
+  .auth-nav__icon {
+    fill: currentColor;
+  }
+
+  .auth-nav__link {
+    color: var(--font-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color var(--page-transition);
+
+    &:hover,
+    &:focus {
+      color: var(--site-accent-color);
+    }
+  }
+
+  .auth-nav__icon {
+    fill: currentColor;
+  }
+
+  @media screen and (max-width: 1199px) {
+    .auth-nav__item:first-child {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .auth-nav {
+    display: flex;
+    gap: 50px;
+  }
+
+  .auth-nav__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}

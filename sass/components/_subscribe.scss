@@ -1,0 +1,45 @@
+.subscribe__label {
+  @include font(700, 14px, 16px);
+  display: block;
+  margin-bottom: 20px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--hero-title-color);
+}
+.subscribe__wrap {
+  display: flex;
+}
+
+.subscribe__input {
+  @include font(400, 16px, 20px);
+  width: 358px;
+  height: 50px;
+  margin-right: 10px;
+  padding-left: 16px;
+  border: 1px solid var(--subscribe-input-border-color);
+  backdrop-filter: drop-shadow(0px 4px 4px var(--subscribe-backdrop-color));
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--hero-title-color);
+  outline: none;
+
+  &::placeholder {
+    @include font(400, 16px, 20px);
+    color: var(--subscribe-placeholder-color);
+  }
+}
+
+.subscribe__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  width: 200px;
+  height: 50px;
+
+  &-icon {
+    fill: currentColor;
+  }
+}
