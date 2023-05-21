@@ -1,6 +1,6 @@
 .button {
   font-family: inherit;
-  @include font(700, 16px, 30px);
+  @include font(16px, 700, 30px);
   letter-spacing: 0.06em;
   text-align: center;
   color: var(--hero-title-color);
