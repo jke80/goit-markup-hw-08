@@ -280,7 +280,7 @@ body {
     left: 0;
     top: 0;
     width: 100vw;
-    height: 100vh;
+    height: 95vh;
     padding-top: 48px;
     padding-bottom: 48px;
     padding-left: 40px;
@@ -388,6 +388,12 @@ body {
   background-size: cover;
 }
 
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-gradient-color)), to(var(--hero-bg-gradient-color))), url(../images/hero-bg-480x400@2x.jpg);
+    background-image: linear-gradient(var(--hero-bg-gradient-color), var(--hero-bg-gradient-color)), url(../images/hero-bg-480x400@2x.jpg);
+  }
+}
 .hero__container {
   text-align: center;
 }
