@@ -44,7 +44,11 @@
 .hero__btn {
   padding: 10px 24px;
 }
-
+@media screen and (max-width: 390px) {
+  .hero__title {
+    width: 90vw;
+  }
+}
 @media screen and (min-width: 481px) {
   .hero {
     max-width: 768px;

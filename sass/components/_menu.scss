@@ -17,7 +17,6 @@
 
   .menu-container {
     position: fixed;
-    // display: none;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -86,7 +85,11 @@
     position: relative;
     display: flex;
     gap: calc((80vw - 340px) / 3);
+    @media screen and (max-width: 430px) {
+      gap: 0;
+    }
   }
+
   .menu-socials__item {
     position: relative;
 
@@ -99,6 +102,10 @@
       background-color: var(--contact-form-border-color);
       right: calc((80vw - 340px) / -6);
       bottom: 0;
+
+      @media screen and (max-width: 430px) {
+        right: 0;
+      }
     }
   }
 

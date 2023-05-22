@@ -8,6 +8,10 @@
   align-items: center;
 }
 
+.page-nav__logo {
+  display: inline-block;
+}
+
 @media screen and (max-width: 767px) {
   .site-nav {
     display: none;
@@ -15,7 +19,10 @@
   .auth-nav {
     display: none;
   }
-
+  .page-nav__logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
   .page-header__container {
     position: relative;
   }
@@ -29,7 +36,6 @@
   }
 
   .page-nav__logo {
-    display: inline-block;
     padding-top: 24px;
     padding-bottom: 25px;
   }

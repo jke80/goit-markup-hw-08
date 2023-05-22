@@ -11,10 +11,6 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
-    />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
@@ -199,60 +195,134 @@
       </section>
 
       <!-- Чим ми займаємось -->
-      <!-- <section class="box">
+      <section class="box">
         <div class="container">
           <h2 class="section-title box__title">Чим ми займаємося</h2>
           <ul class="box__list list">
             <li class="box__item">
-              <img
-                src="./images/img1.jpg"
-                alt="Руки розробника на клавіатурі"
-                width="370"
-                class="no-gap"
-              />
+              <picture>
+                <source
+                  srcset="./images/img1.webp 1x, ./images/img1@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/img1.jpg 1x, ./images/img1@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/img1.jpg"
+                  alt="Руки розробника на клавіатурі"
+                />
+              </picture>
+
               <div class="box__wrap">
                 <p class="box__text">Десктопні додатки</p>
               </div>
             </li>
             <li class="box__item">
-              <img
-                src="./images/img2.jpg"
-                alt="Жіноча рука тримає мобільний телефон"
-                width="370"
-                class="no-gap"
-              />
+              <picture>
+                <source
+                  srcset="./images/img2.webp 1x, ./images/img2@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/img2.jpg 1x, ./images/img2@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/img2.jpg"
+                  alt="Жіноча рука тримає мобільний телефон"
+                />
+              </picture>
+
               <div class="box__wrap">
                 <p class="box__text">Мобільні додатки</p>
               </div>
             </li>
             <li class="box__item">
-              <img
-                src="./images/img3.jpg"
-                alt="Дизайнер працює за комп'ютером"
-                width="370"
-                class="no-gap"
-              />
+              <picture>
+                <source
+                  srcset="./images/img3.webp 1x, ./images/img3@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/img3.jpg 1x, ./images/img3@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/img3.jpg"
+                  alt="Дизайнер працює за комп'ютером"
+                />
+              </picture>
+
               <div class="box__wrap">
                 <p class="box__text">Дизайнерські рішення</p>
               </div>
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- ----------------------------------------------------->
       <!-- Наша команда -->
-      <!-- <section class="team">
+      <section class="team">
         <div class="container">
           <h2 class="section-title team__title">Наша команда</h2>
           <ul class="list team__list">
             <li class="team__card">
-              <img
-                src="./images/photo1.jpg"
-                alt="Фотографія Ігор Дем'яненко"
-                width="270"
-                class="no-gap"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/photo1-270x260.webp    1x,
+                    ./images/photo1-270x260@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/photo1-270x260.jpg    1x,
+                    ./images/photo1-270x260@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/photo1-354x374.webp    1x,
+                    ./images/photo1-354x374@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/photo1-354x374.jpg    1x,
+                    ./images/photo1-354x374@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/photo1-450x460.webp    1x,
+                    ./images/photo1-450x460@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/photo1-450x460.jpg    1x,
+                    ./images/photo1-450x460@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/photo1-270x260.jpg"
+                  alt="Фотографія Ігор Дем'яненко"
+                />
+              </picture>
+
               <div class="team__wrap">
                 <h3 class="team__name">Ігор Дем'яненко</h3>
                 <p class="team__text">Product Designer</p>
@@ -289,12 +359,59 @@
               </div>
             </li>
             <li class="team__card">
-              <img
-                src="./images/photo2.jpg"
-                alt="Фотографія Ольга Рєпіна"
-                width="270"
-                class="no-gap"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/photo2-270x260.webp    1x,
+                    ./images/photo2-270x260@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/photo2-270x260.jpg    1x,
+                    ./images/photo2-270x260@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/photo2-354x374.webp    1x,
+                    ./images/photo2-354x374@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/photo2-354x374.jpg    1x,
+                    ./images/photo2-354x374@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/photo2-450x460.webp    1x,
+                    ./images/photo2-450x460@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/photo2-450x460.jpg    1x,
+                    ./images/photo2-450x460@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/photo2-270x260.jpg"
+                  alt="Фотографія Ольга Рєпіна"
+                />
+              </picture>
+
               <div class="team__wrap">
                 <h3 class="team__name">Ольга Рєпіна</h3>
                 <p class="team__text">Frontend Developer</p>
@@ -331,12 +448,59 @@
               </div>
             </li>
             <li class="team__card">
-              <img
-                src="./images/photo3.jpg"
-                alt="Фотографія Микола Тарасов"
-                width="270"
-                class="no-gap"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/photo3-270x260.webp    1x,
+                    ./images/photo3-270x260@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/photo3-270x260.jpg    1x,
+                    ./images/photo3-270x260@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/photo3-354x374.webp    1x,
+                    ./images/photo3-354x374@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/photo3-354x374.jpg    1x,
+                    ./images/photo3-354x374@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/photo3-450x460.webp    1x,
+                    ./images/photo3-450x460@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/photo3-450x460.jpg    1x,
+                    ./images/photo3-450x460@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/photo3-270x260.jpg"
+                  alt="Фотографія Микола Тарасов"
+                />
+              </picture>
+
               <div class="team__wrap">
                 <h3 class="team__name">Микола Тарасов</h3>
                 <p class="team__text">Marketing</p>
@@ -373,12 +537,59 @@
               </div>
             </li>
             <li class="team__card">
-              <img
-                src="./images/photo4.jpg"
-                alt="Фотографія Михайло Єрмаков"
-                width="270"
-                class="no-gap"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/photo4-270x260.webp    1x,
+                    ./images/photo4-270x260@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/photo4-270x260.jpg    1x,
+                    ./images/photo4-270x260@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/photo4-354x374.webp    1x,
+                    ./images/photo4-354x374@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/photo4-354x374.jpg    1x,
+                    ./images/photo4-354x374@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/photo4-450x460.webp    1x,
+                    ./images/photo4-450x460@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/photo4-450x460.jpg    1x,
+                    ./images/photo4-450x460@2x.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/photo4-270x260.jpg"
+                  alt="Фотографія Михайло Єрмаков"
+                />
+              </picture>
+
               <div class="team__wrap">
                 <h3 class="team__name">Михайло Єрмаков</h3>
                 <p class="team__text">UI Designer</p>
@@ -416,7 +627,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- Постійні клієнти------------------------------------->
       <!-- <section class="clients">
