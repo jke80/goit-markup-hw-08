@@ -1076,7 +1076,7 @@ img {
             align-items: baseline;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .footer__logo {
     text-align: center;
   }
