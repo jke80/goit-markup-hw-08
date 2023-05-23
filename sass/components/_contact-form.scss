@@ -3,7 +3,8 @@
 }
 
 .contact-form__title {
-  @include font(700, 20px, 23px);
+  @include font(20px, 700, 30px);
+  letter-spacing: 0.03em;
   text-align: center;
   margin-top: 0;
   margin-bottom: 12px;
@@ -11,7 +12,7 @@
 }
 
 .contact-form__label {
-  @include font(400, 12px, 14px);
+  @include font(12px, 400, 14px);
   display: block;
   margin-bottom: 10px;
   letter-spacing: 0.01em;
@@ -62,7 +63,7 @@
   margin-top: 4px;
 
   &::placeholder {
-    @include font(400, 12px, 14px);
+    @include font(14px, 400, 16px);
     letter-spacing: 0.01em;
     color: var(--contact-form-placeholder-color);
   }
@@ -72,9 +73,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: calc(24 / 14);
+  @include font(12px, 400, 14px);
   letter-spacing: 0.03em;
   color: var(--font-color);
 }
@@ -106,8 +105,18 @@
 
 .contact-form__btn {
   display: block;
-  margin-top: 30px;
+  margin-top: 31px;
   margin-left: auto;
   margin-right: auto;
   padding: 10px 52px;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-form__title {
+    @include font(20px, 700, 23px);
+  }
+
+  .contact-form__policy-label {
+    @include font(14px, 400, 24px);
+  }
 }
