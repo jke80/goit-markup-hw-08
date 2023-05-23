@@ -3,23 +3,60 @@
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
 .footer__container {
   display: flex;
-  align-items: baseline;
-}
-.footer__socials {
-  margin-left: 70px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.footer__socials-text {
-  @include font(700, 14px, 16px);
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--hero-title-color);
-  margin-top: 0;
-  margin-bottom: 20px;
+@media screen and (max-width: 767px) {
+  .footer__container {
+    flex-direction: column;
+    gap: 60px;
+  }
 }
 
-.footer__subscribe-form {
-  margin-left: 93px;
+@media screen and (min-width: 768px) {
+  .footer__container {
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  @media screen and (max-width: 1199px) {
+    .footer__logo {
+      text-align: center;
+    }
+    .footer__socials-title {
+      text-align: center;
+    }
+    .footer__container {
+      flex-wrap: wrap;
+    }
+    .footer__address,
+    .footer__socials {
+      flex-basis: calc(50%);
+    }
+
+    .footer__subscribe-form {
+      margin-top: 60px;
+      flex-basis: 450px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__subscribe-form {
+    flex-basis: 570px;
+  }
+
+  .footer__address {
+    flex-basis: 231px;
+  }
+  .footer__socials {
+    margin-left: 70px;
+    margin-right: 93px;
+  }
 }

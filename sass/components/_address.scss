@@ -1,9 +1,9 @@
 .address {
   margin-top: 20px;
-  width: 231px;
 }
+
 .address__item {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 
   &:last-child {
     margin-bottom: 0;
@@ -13,10 +13,15 @@
 .address__link {
   color: var(--hero-title-color);
   font-style: normal;
-  @include font(400, 14px, 24px);
+  @include font(14px, 400, 24px);
   text-decoration-line: none;
 
   &_color_opacity {
     color: var(--address-link-color);
+  }
+}
+@media screen and (max-width: 1199px) {
+  .address__item {
+    text-align: center;
   }
 }

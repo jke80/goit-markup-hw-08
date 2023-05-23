@@ -1,4 +1,5 @@
 .logo {
+  display: block;
   @include font(26px, 700, 31px);
   font-family: var(--logo-font, sans-serif);
   text-decoration: none;
