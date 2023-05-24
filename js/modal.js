@@ -10,5 +10,13 @@
 
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
+   const isModalOpen =
+      refs.openModalBtn.getAttribute('aria-expanded') === 'true' || false;
+    refs.openModalBtn.setAttribute('aria-expanded', !isModalOpen);
+    
+    const scrollLockMethod = !isModalOpen
+      ? 'disableBodyScroll'
+      : 'enableBodyScroll';
+    bodyScrollLock[scrollLockMethod](document.body); 
   }
 })();

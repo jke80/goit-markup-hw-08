@@ -1,8 +1,13 @@
 .page-header {
   border-bottom: 1px solid var(--header-border-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 .page-header__container {
+  background-color: var(--background-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,9 +23,6 @@
   .page-nav__logo {
     padding-top: 16px;
     padding-bottom: 16px;
-  }
-  .page-header__container {
-    position: relative;
   }
 }
 

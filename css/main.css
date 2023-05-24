@@ -312,6 +312,7 @@ img {
 }
 
 .container {
+  position: relative;
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
@@ -344,9 +345,14 @@ img {
 
 .page-header {
   border-bottom: 1px solid var(--header-border-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 .page-header__container {
+  background-color: var(--background-color);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -368,9 +374,6 @@ img {
   .page-nav__logo {
     padding-top: 16px;
     padding-bottom: 16px;
-  }
-  .page-header__container {
-    position: relative;
   }
 }
 @media screen and (min-width: 768px) {
@@ -471,9 +474,9 @@ img {
 }
 .logo {
   display: block;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 1.1923076923;
+  line-height: 1.1666666667;
   font-family: var(--logo-font, sans-serif);
   text-decoration: none;
   color: var(--site-accent-color);
@@ -485,6 +488,22 @@ img {
   color: var(--logo-color-white);
 }
 
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.1923076923;
+  }
+}
+.page-main {
+  margin-top: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .page-main {
+    margin-top: 80px;
+  }
+}
 .button {
   font-family: inherit;
   font-size: 16px;
@@ -511,14 +530,8 @@ img {
     display: block;
     border: none;
     background-color: transparent;
-    padding-left: 0;
-    padding-right: 0;
   }
-  .menu-burger-btn {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .menu-burger-btn__svg {
+  .menu-btn__svg {
     fill: var(--title-font-color);
   }
   .menu-container {
@@ -533,25 +546,25 @@ img {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    left: 0;
-    top: 0;
-    width: 100vw;
+    left: 50%;
+    top: 50%;
     height: 95vh;
     padding-top: 6vh;
     padding-bottom: 6vh;
     padding-left: 8vw;
     padding-right: 8vw;
+    z-index: 999;
     background-color: var(--background-color);
-    -webkit-transform: translateX(110%);
-            transform: translateX(110%);
+    -webkit-transform: scale(0) translate(-50%, -50%);
+            transform: scale(0) translate(-50%, -50%);
     -webkit-transition: -webkit-transform var(--page-transition);
     transition: -webkit-transform var(--page-transition);
     transition: transform var(--page-transition);
     transition: transform var(--page-transition), -webkit-transform var(--page-transition);
   }
   .menu-container.is-open {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: scale(1) translate(-50%, -50%);
+            transform: scale(1) translate(-50%, -50%);
   }
   .menu-close-btn {
     position: absolute;
@@ -1255,6 +1268,7 @@ img {
 }
 .backdrop {
   position: fixed;
+  z-index: 20;
   top: 0;
   left: 0;
   width: 100vw;
