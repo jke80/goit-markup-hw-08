@@ -11,10 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
-    />
+    /> -->
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
@@ -29,42 +29,32 @@
             <li>
               <a
                 href="./index.html"
-                class="link page-header__link site-nav__link"
+                class="link site-nav__link site-nav__link_current"
                 >Студія</a
               >
             </li>
             <li>
-              <a
-                href="./portfolio.html"
-                class="link page-header__link site-nav__link site-nav__link_current"
+              <a href="./portfolio.html" class="link site-nav__link"
                 >Портфоліо</a
               >
             </li>
             <li>
-              <a href="#" class="link page-header__link site-nav__link"
-                >Контакти</a
-              >
+              <a href="#" class="link site-nav__link">Контакти</a>
             </li>
           </ul>
         </nav>
 
         <ul class="auth-nav list">
-          <li>
-            <a
-              href="meilto:info@devstudio.com"
-              class="link page-header__link auth-nav__link"
-            >
+          <li class="auth-nav__item">
+            <a href="meilto:info@devstudio.com" class="link auth-nav__link">
               <svg class="auth-nav__icon" width="16" height="16">
                 <use href="./images/icons.svg#envelope"></use>
               </svg>
               info@devstudio.com</a
             >
           </li>
-          <li>
-            <a
-              href="tel:+380961111111"
-              class="link page-header__link auth-nav__link"
-            >
+          <li class="auth-nav__item">
+            <a href="tel:+380961111111" class="link auth-nav__link">
               <svg class="auth-nav__icon" width="16" height="16">
                 <use href="./images/icons.svg#smartphone"></use>
               </svg>
@@ -72,6 +62,72 @@
             >
           </li>
         </ul>
+
+        <button
+          type="button"
+          class="menu-btn menu-burger-btn js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="40" height="40" class="menu-burger-btn__svg">
+            <use href="./images/icons.svg#icon-mobile-menu"></use>
+          </svg>
+        </button>
+
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button type="button" class="menu-btn menu-close-btn js-close-menu">
+            <svg class="menu-close-svg__btn" width="40" height="40">
+              <use href="./images/icons.svg#icon-close-mobile-menu"></use>
+            </svg>
+          </button>
+
+          <ul class="menu-nav list">
+            <li class="menu-nav__item">
+              <a
+                href="./index.html"
+                class="menu-nav__link menu-nav__link_current"
+                >Студія</a
+              >
+            </li>
+            <li class="menu-nav__item">
+              <a href="./portfolio.html" class="menu-nav__link">Портфоліо</a>
+            </li>
+            <li class="menu-nav__item">
+              <a href="#" class="menu-nav__link">Контакти</a>
+            </li>
+          </ul>
+          <div class="menu-container__bottom">
+            <a href="tel:+380961111111" class="link menu-container__tel">
+              +38 096 111 11 11</a
+            >
+            <a
+              href="meilto:info@devstudio.com"
+              class="link menu-container__email"
+            >
+              info@devstudio.com</a
+            >
+            <ul class="menu-socials list">
+              <li class="menu-socials__item">
+                <a href="#" class="link menu-socials__link">Instagram</a>
+              </li>
+              <li class="menu-socials__item">
+                <a href="#" class="link menu-socials__link">Twitter</a>
+              </li>
+              <li class="menu-socials__item">
+                <a href="#" class="link menu-socials__link">Facebook</a>
+              </li>
+              <li class="menu-socials__item">
+                <a href="#" class="link menu-socials__link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <script
+          defer
+          src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+          integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+          crossorigin="anonymous"
+        ></script>
       </div>
     </header>
 
@@ -83,7 +139,12 @@
           <!-- Фільтри -->
           <ul class="portfolio__filter list">
             <li>
-              <button type="button" class="portfolio__button">Усі</button>
+              <button
+                type="button"
+                class="portfolio__button portfolio__button_first"
+              >
+                Усі
+              </button>
             </li>
             <li>
               <button type="button" class="portfolio__button">Веб-сайти</button>
@@ -103,13 +164,50 @@
           <ul class="portfolio__list list">
             <li class="portfolio__item work">
               <a href="#" class="work__link">
-                <img
-                  src="./images/project1.jpg"
-                  alt="Технокряк"
-                  width="370"
-                  height="294"
-                  class="no-gap"
-                />
+                <picture>
+                  <source
+                    srcset="./images/project1.webp"
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/project1.jpg"
+                    media="(min-width: 1200px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/project1-354x294.webp    1x,
+                      ./images/project1-354x294@2x.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/project1-354x294.jpg    1x,
+                      ./images/project1-354x294@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/project1-450x294.webp    1x,
+                      ./images/project1-450x294@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/project1-450x294.jpg    1x,
+                      ./images/project1-450x294@2x.jpg 2x
+                    "
+                    type="image/jpeg"
+                  />
+                  <img src="./images/project1.jpg" alt="Технокряк" />
+                </picture>
+
                 <div class="work__inner">
                   <div class="work__overlay">
                     <p class="work__text">
@@ -129,13 +227,53 @@
 
             <li class="portfolio__item work">
               <a href="#" class="work__link">
-                <img
-                  src="./images/project2.jpg"
-                  alt="Постер New Orlean vs Golden Star"
-                  width="370"
-                  height="294"
-                  class="no-gap"
-                />
+                <picture>
+                  <source
+                    srcset="./images/project2.webp"
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/project2.jpg"
+                    media="(min-width: 1200px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/project2-354x294.webp    1x,
+                      ./images/project2-354x294@2x.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/project2-354x294.jpg    1x,
+                      ./images/project2-354x294@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/project2-450x294.webp    1x,
+                      ./images/project2-450x294@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/project2-450x294.jpg    1x,
+                      ./images/project2-450x294@2x.jpg 2x
+                    "
+                    type="image/jpeg"
+                  />
+                  <img
+                    src="./images/project2.jpg"
+                    alt="Постер New Orlean vs Golden Star"
+                  />
+                </picture>
+
                 <div class="work__inner">
                   <div class="work__overlay">
                     <p class="work__text">
@@ -155,13 +293,50 @@
 
             <li class="portfolio__item work">
               <a href="#" class="work__link">
-                <img
-                  src="./images/project3.jpg"
-                  alt="Ресторан Seafood"
-                  width="370"
-                  height="294"
-                  class="no-gap"
-                />
+                <picture>
+                  <source
+                    srcset="./images/project3.webp"
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/project3.jpg"
+                    media="(min-width: 1200px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/project3-354x294.webp    1x,
+                      ./images/project3-354x294@2x.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/project3-354x294.jpg    1x,
+                      ./images/project3-354x294@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/project3-450x294.webp    1x,
+                      ./images/project3-450x294@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/project3-450x294.jpg    1x,
+                      ./images/project3-450x294@2x.jpg 2x
+                    "
+                    type="image/jpeg"
+                  />
+                  <img src="./images/project3.jpg" alt="Ресторан Seafood" />
+                </picture>
+
                 <div class="work__inner">
                   <div class="work__overlay">
                     <p class="work__text">
@@ -181,13 +356,50 @@
 
             <li class="portfolio__item work">
               <a href="#" class="work__link">
-                <img
-                  src="./images/project4.jpg"
-                  alt="Проєкт Prime"
-                  width="370"
-                  height="294"
-                  class="no-gap"
-                />
+                <picture>
+                  <source
+                    srcset="./images/project4.webp"
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/project4.jpg"
+                    media="(min-width: 1200px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/project4-354x294.webp    1x,
+                      ./images/project4-354x294@2x.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/project4-354x294.jpg    1x,
+                      ./images/project4-354x294@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/project4-450x294.webp    1x,
+                      ./images/project4-450x294@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/project4-450x294.jpg    1x,
+                      ./images/project4-450x294@2x.jpg 2x
+                    "
+                    type="image/jpeg"
+                  />
+                  <img src="./images/project4.jpg" alt="Проєкт Prime" />
+                </picture>
+
                 <div class="work__inner">
                   <div class="work__overlay">
                     <p class="work__text">
@@ -207,13 +419,50 @@
 
             <li class="portfolio__item work">
               <a href="#" class="work__link">
-                <img
-                  src="./images/project5.jpg"
-                  alt="Проєкт Boxes"
-                  width="370"
-                  height="294"
-                  class="no-gap"
-                />
+                <picture>
+                  <source
+                    srcset="./images/project5.webp"
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/project5.jpg"
+                    media="(min-width: 1200px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/project5-354x294.webp    1x,
+                      ./images/project5-354x294@2x.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/project5-354x294.jpg    1x,
+                      ./images/project5-354x294@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/project5-450x294.webp    1x,
+                      ./images/project5-450x294@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/project5-450x294.jpg    1x,
+                      ./images/project5-450x294@2x.jpg 2x
+                    "
+                    type="image/jpeg"
+                  />
+                  <img src="./images/project5.jpg" alt="Проєкт Boxes" />
+                </picture>
+
                 <div class="work__inner">
                   <div class="work__overlay">
                     <p class="work__text">
@@ -233,13 +482,53 @@
 
             <li class="portfolio__item work">
               <a href="#" class="work__link">
-                <img
-                  src="./images/project6.jpg"
-                  alt="Inspiration has no Borders"
-                  width="370"
-                  height="294"
-                  class="no-gap"
-                />
+                <picture>
+                  <source
+                    srcset="./images/project6.webp"
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/project6.jpg"
+                    media="(min-width: 1200px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/project6-354x294.webp    1x,
+                      ./images/project6-354x294@2x.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/project6-354x294.jpg    1x,
+                      ./images/project6-354x294@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/project6-450x294.webp    1x,
+                      ./images/project6-450x294@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/project6-450x294.jpg    1x,
+                      ./images/project6-450x294@2x.jpg 2x
+                    "
+                    type="image/jpeg"
+                  />
+                  <img
+                    src="./images/project6.jpg"
+                    alt="Inspiration has no Borders"
+                  />
+                </picture>
+
                 <div class="work__inner">
                   <div class="work__overlay">
                     <p class="work__text">
@@ -259,13 +548,53 @@
 
             <li class="portfolio__item work">
               <a href="#" class="work__link">
-                <img
-                  src="./images/project7.jpg"
-                  alt="Видання Limited Edition"
-                  width="370"
-                  height="294"
-                  class="no-gap"
-                />
+                <picture>
+                  <source
+                    srcset="./images/project7.webp"
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/project7.jpg"
+                    media="(min-width: 1200px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/project7-354x294.webp    1x,
+                      ./images/project7-354x294@2x.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/project7-354x294.jpg    1x,
+                      ./images/project7-354x294@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/project7-450x294.webp    1x,
+                      ./images/project7-450x294@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/project7-450x294.jpg    1x,
+                      ./images/project7-450x294@2x.jpg 2x
+                    "
+                    type="image/jpeg"
+                  />
+                  <img
+                    src="./images/project7.jpg"
+                    alt="Видання Limited Edition"
+                  />
+                </picture>
+
                 <div class="work__inner">
                   <div class="work__overlay">
                     <p class="work__text">
@@ -285,13 +614,50 @@
 
             <li class="portfolio__item work">
               <a href="#" class="work__link">
-                <img
-                  src="./images/project8.jpg"
-                  alt="Проєкт LAB"
-                  width="370"
-                  height="294"
-                  class="no-gap"
-                />
+                <picture>
+                  <source
+                    srcset="./images/project8.webp"
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/project8.jpg"
+                    media="(min-width: 1200px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/project8-354x294.webp    1x,
+                      ./images/project8-354x294@2x.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/project8-354x294.jpg    1x,
+                      ./images/project8-354x294@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/project8-450x294.webp    1x,
+                      ./images/project8-450x294@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/project8-450x294.jpg    1x,
+                      ./images/project8-450x294@2x.jpg 2x
+                    "
+                    type="image/jpeg"
+                  />
+                  <img src="./images/project8.jpg" alt="Проєкт LAB" />
+                </picture>
+
                 <div class="work__inner">
                   <div class="work__overlay">
                     <p class="work__text">
@@ -311,13 +677,50 @@
 
             <li class="portfolio__item work">
               <a href="#" class="work__link">
-                <img
-                  src="./images/project9.jpg"
-                  alt="Growing Business"
-                  width="370"
-                  height="294"
-                  class="no-gap"
-                />
+                <picture>
+                  <source
+                    srcset="./images/project9.webp"
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/project9.jpg"
+                    media="(min-width: 1200px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/project9-354x294.webp    1x,
+                      ./images/project9-354x294@2x.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/project9-354x294.jpg    1x,
+                      ./images/project9-354x294@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/project9-450x294.webp    1x,
+                      ./images/project9-450x294@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/project9-450x294.jpg    1x,
+                      ./images/project9-450x294@2x.jpg 2x
+                    "
+                    type="image/jpeg"
+                  />
+                  <img src="./images/project9.jpg" alt="Growing Business" />
+                </picture>
+
                 <div class="work__inner">
                   <div class="work__overlay">
                     <p class="work__text">
@@ -342,8 +745,8 @@
     <!-- Футер з адресою -->
     <footer class="footer">
       <div class="container footer__container">
-        <div>
-          <a href="./index.html" class="logo"
+        <div class="footer__address">
+          <a href="./index.html" class="logo footer__logo"
             >Web<span class="logo__part logo__part_color_white">Studio</span></a
           >
           <address class="address">
@@ -377,7 +780,7 @@
         </div>
 
         <div class="footer__socials">
-          <p class="footer__socials-text">приєднуйтесь</p>
+          <p class="socials-title footer__socials-title">приєднуйтесь</p>
           <ul class="socials list">
             <li>
               <a class="socials__link socials__link_background_opacity" href="#"

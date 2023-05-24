@@ -1,27 +1,31 @@
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .portfolio__filter {
   display: flex;
-  justify-content: center;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
 .portfolio__button {
-  @include font(500, 16px, 26px);
+  @include font(16px, 500, 26px);
   font-family: inherit;
   text-align: center;
   color: var(--title-font-color);
   background-color: var(--team-background-color);
   cursor: pointer;
   border-radius: 4px;
-  padding: 6px 25px;
+  padding: 6px 22px;
   border: none;
   transition: color var(--page-transition),
     background-color var(--page-transition), box-shadow var(--page-transition);
 
+  &_first {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
   &:hover,
   &:focus {
     color: var(--hero-title-color);
@@ -32,12 +36,43 @@
 }
 
 .portfolio__list {
-  margin-top: 50px;
+  margin-top: 40px;
   display: flex;
-  gap: 30px;
+  margin: -15px;
   flex-wrap: wrap;
+  align-items: stretch;
+}
+.portfolio__item {
+  margin: 15px;
 }
 
-.portfolio__item {
-  flex-basis: calc((100% - 2 * 30px) / 3);
+@media screen and (max-width: 767px) {
+  .portfolio__filter {
+    max-width: 350px;
+    margin-bottom: 40px;
+  }
+  .portfolio__item {
+    flex-basis: calc(100%);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__filter {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .portfolio__item {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio__filter {
+    margin-bottom: 50px;
+  }
+
+  .portfolio__item {
+    flex-basis: calc((100% - 3 * 30px) / 3);
+  }
 }

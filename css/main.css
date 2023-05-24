@@ -1076,6 +1076,12 @@ img {
             align-items: baseline;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__subscribe-form {
+    -ms-flex-preferred-size: 450px;
+        flex-basis: 450px;
+  }
+}
 @media screen and (max-width: 1199px) {
   .footer__logo {
     text-align: center;
@@ -1094,8 +1100,6 @@ img {
   }
   .footer__subscribe-form {
     margin-top: 60px;
-    -ms-flex-preferred-size: 450px;
-        flex-basis: 450px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1487,36 +1491,39 @@ img {
   }
 }
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .portfolio__filter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   gap: 8px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .portfolio__button {
-  font-size: 500;
-  font-weight: 16px;
-  line-height: 0.052px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.625;
   font-family: inherit;
   text-align: center;
   color: var(--title-font-color);
   background-color: var(--team-background-color);
   cursor: pointer;
   border-radius: 4px;
-  padding: 6px 25px;
+  padding: 6px 22px;
   border: none;
   -webkit-transition: color var(--page-transition), background-color var(--page-transition), -webkit-box-shadow var(--page-transition);
   transition: color var(--page-transition), background-color var(--page-transition), -webkit-box-shadow var(--page-transition);
   transition: color var(--page-transition), background-color var(--page-transition), box-shadow var(--page-transition);
   transition: color var(--page-transition), background-color var(--page-transition), box-shadow var(--page-transition), -webkit-box-shadow var(--page-transition);
+}
+.portfolio__button_first {
+  padding-left: 25px;
+  padding-right: 25px;
 }
 .portfolio__button:hover, .portfolio__button:focus {
   color: var(--hero-title-color);
@@ -1526,23 +1533,63 @@ img {
 }
 
 .portfolio__list {
-  margin-top: 50px;
+  margin-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 30px;
+  margin: -15px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 .portfolio__item {
-  -ms-flex-preferred-size: calc((100% - 60px) / 3);
-      flex-basis: calc((100% - 60px) / 3);
+  margin: 15px;
 }
 
+@media screen and (max-width: 767px) {
+  .portfolio__filter {
+    max-width: 350px;
+    margin-bottom: 40px;
+  }
+  .portfolio__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .portfolio__filter {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 30px;
+  }
+  .portfolio__item {
+    -ms-flex-preferred-size: calc((100% - 60px) / 2);
+        flex-basis: calc((100% - 60px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__filter {
+    margin-bottom: 50px;
+  }
+  .portfolio__item {
+    -ms-flex-preferred-size: calc((100% - 90px) / 3);
+        flex-basis: calc((100% - 90px) / 3);
+  }
+}
 .work__link {
   position: relative;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
   text-decoration-line: none;
   -webkit-transition: -webkit-box-shadow var(--page-transition);
   transition: -webkit-box-shadow var(--page-transition);
@@ -1591,9 +1638,9 @@ img {
 }
 
 .work__text {
-  font-size: 400;
-  font-weight: 18px;
-  line-height: 0.07px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5555555556;
   color: var(--hero-title-color);
   margin-top: 0;
   margin-bottom: 0;
@@ -1604,12 +1651,13 @@ img {
   border-right: 1px solid var(--work-desc-border-color);
   border-left: 1px solid var(--work-desc-border-color);
   border-bottom: 1px solid var(--work-desc-border-color);
+  height: 100%;
 }
 
 .work__title {
-  font-size: 700;
-  font-weight: 18px;
-  line-height: 0.0514285714px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-font-color);
   margin-top: 0;
@@ -1617,9 +1665,9 @@ img {
 }
 
 .work__subtitle {
-  font-size: 400;
-  font-weight: 16px;
-  line-height: 0.075px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.875;
   color: var(--font-color);
   margin: 0;
 }/*# sourceMappingURL=main.css.map */

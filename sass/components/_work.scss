@@ -1,6 +1,8 @@
 .work__link {
   position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   text-decoration-line: none;
   transition: box-shadow var(--page-transition);
 
@@ -41,7 +43,7 @@
 }
 
 .work__text {
-  @include font(400, 18px, 28px);
+  @include font(18px, 400, 28px);
   color: var(--hero-title-color);
   margin-top: 0;
   margin-bottom: 0;
@@ -52,10 +54,11 @@
   border-right: 1px solid var(--work-desc-border-color);
   border-left: 1px solid var(--work-desc-border-color);
   border-bottom: 1px solid var(--work-desc-border-color);
+  height: 100%;
 }
 
 .work__title {
-  @include font(700, 18px, 36px);
+  @include font(18px, 700, 36px);
   letter-spacing: 0.06em;
   color: var(--title-font-color);
   margin-top: 0;
@@ -63,7 +66,7 @@
 }
 
 .work__subtitle {
-  @include font(400, 16px, 30px);
+  @include font(16px, 400, 30px);
   color: var(--font-color);
   margin: 0;
 }
