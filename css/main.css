@@ -693,29 +693,37 @@ img {
     width: 90vw;
   }
 }
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 768px) {
   .hero {
     max-width: 768px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-gradient-color)), to(var(--hero-bg-gradient-color))), url(../images/hero-bg-768x400.jpg);
     background-image: linear-gradient(var(--hero-bg-gradient-color), var(--hero-bg-gradient-color)), url(../images/hero-bg-768x400.jpg);
   }
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-color: var(--hero-background-color);
-    max-width: 1199px;
-    max-height: 400px;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-gradient-color)), to(var(--hero-bg-gradient-color))), url(../images/hero-bg-1600x600.jpg);
-    background-image: linear-gradient(var(--hero-bg-gradient-color), var(--hero-bg-gradient-color)), url(../images/hero-bg-1600x600.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-gradient-color)), to(var(--hero-bg-gradient-color))), url(../images/hero-bg-768x400@2x.jpg);
+    background-image: linear-gradient(var(--hero-bg-gradient-color), var(--hero-bg-gradient-color)), url(../images/hero-bg-768x400@2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
+    background-color: var(--hero-background-color);
     max-width: 1600px;
     max-height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-gradient-color)), to(var(--hero-bg-gradient-color))), url(../images/hero-bg-1600x600.jpg);
+    background-image: linear-gradient(var(--hero-bg-gradient-color), var(--hero-bg-gradient-color)), url(../images/hero-bg-1600x600.jpg);
   }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-gradient-color)), to(var(--hero-bg-gradient-color))), url(../images/hero-bg-1600x600@2x.jpg);
+    background-image: linear-gradient(var(--hero-bg-gradient-color), var(--hero-bg-gradient-color)), url(../images/hero-bg-1600x600@2x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
   .hero__title {
     font-size: 44px;
     font-weight: 900;
