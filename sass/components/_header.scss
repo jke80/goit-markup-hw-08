@@ -4,10 +4,10 @@
   top: 0;
   width: 100%;
   z-index: 10;
+  background-color: var(--background-color);
 }
 
 .page-header__container {
-  background-color: var(--background-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
