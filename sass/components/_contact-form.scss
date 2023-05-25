@@ -110,6 +110,29 @@
   margin-right: auto;
   padding: 10px 52px;
 }
+// for my tel
+@media screen and ((orientation: landscape) or (max-height: 608px)) {
+  .contact-form {
+    padding: 10px;
+  }
+  .contact-form__title {
+    margin-bottom: 0;
+  }
+  .contact-form__label {
+    margin-bottom: 5px;
+  }
+  .contact-form__textarea-label {
+    margin-bottom: 10px;
+  }
+  .contact-form__textarea-input {
+    height: 40px;
+  }
+
+  .contact-form__btn {
+    margin-top: 10px;
+  }
+}
+// -------------------
 
 @media screen and (min-width: 1200px) {
   .contact-form__title {
