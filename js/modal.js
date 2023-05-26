@@ -10,9 +10,9 @@
 
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
-   const isModalOpen =
+    const isModalOpen =
       refs.openModalBtn.getAttribute('aria-expanded') === 'true' || false;
-    refs.openModalBtn.setAttribute('aria-expanded', !isModalOpen);
+      refs.openModalBtn.setAttribute('aria-expanded', !isModalOpen);
     
     const scrollLockMethod = !isModalOpen
       ? 'disableBodyScroll'
