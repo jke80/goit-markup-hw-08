@@ -679,7 +679,6 @@ img {
   padding-bottom: 118px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 480px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-gradient-color)), to(var(--hero-bg-gradient-color))), url(../images/hero-bg-480x400.jpg);
   background-image: linear-gradient(var(--hero-bg-gradient-color), var(--hero-bg-gradient-color)), url(../images/hero-bg-480x400.jpg);
   background-repeat: no-repeat;
@@ -722,7 +721,6 @@ img {
 }
 @media screen and (min-width: 768px) {
   .hero {
-    max-width: 768px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-gradient-color)), to(var(--hero-bg-gradient-color))), url(../images/hero-bg-768x400.jpg);
     background-image: linear-gradient(var(--hero-bg-gradient-color), var(--hero-bg-gradient-color)), url(../images/hero-bg-768x400.jpg);
   }
@@ -736,8 +734,6 @@ img {
 @media screen and (min-width: 1200px) {
   .hero {
     background-color: var(--hero-background-color);
-    max-width: 1600px;
-    max-height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-gradient-color)), to(var(--hero-bg-gradient-color))), url(../images/hero-bg-1600x600.jpg);
