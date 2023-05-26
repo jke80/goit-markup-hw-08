@@ -619,7 +619,7 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 5px;
+    gap: 10px;
   }
   .menu-socials__item {
     position: relative;
@@ -631,7 +631,7 @@ img {
     width: 1px;
     height: 1.17em;
     background-color: var(--contact-form-border-color);
-    right: -2.5px;
+    right: -5px;
     bottom: 48px;
   }
   .menu-socials__link {
