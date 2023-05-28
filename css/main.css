@@ -551,15 +551,14 @@ img {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    left: 50%;
+    left: 0;
     top: 0;
+    width: 100vw;
     height: 100vh;
     padding-top: 48px;
     padding-left: 20px;
     z-index: 999;
     background-color: var(--background-color);
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -734,6 +733,7 @@ img {
 @media screen and (min-width: 1200px) {
   .hero {
     background-color: var(--hero-background-color);
+    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(var(--hero-bg-gradient-color)), to(var(--hero-bg-gradient-color))), url(../images/hero-bg-1600x600.jpg);
@@ -1699,7 +1699,10 @@ img {
 }
 
 .work__desc-box {
-  padding: 20px 24px;
+  padding-top: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 20px;
   border-right: 1px solid var(--work-desc-border-color);
   border-left: 1px solid var(--work-desc-border-color);
   border-bottom: 1px solid var(--work-desc-border-color);
